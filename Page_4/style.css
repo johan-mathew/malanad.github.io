@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    font-family: 'Playfair Display', serif;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    border-bottom: solid 2px rgb(255, 255, 255);
+    padding: 0 40px;
+}
+.navbar .navbar-home{
+    float: left;
+    text-transform: capitalize;
+    font-family: 'Playfair Display', serif;
+
+}
+.navbar-navs{
+    text-transform: uppercase;
+    float: right;
+    margin: 20px 20px;
+    font-family: 'Work Sans', sans-serif;
+}
+.header{
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    background: url('assets/header-2.png');
+    background-size: cover;
+}
+.active{
+    border-bottom: solid 2px rgb(255, 255, 255);
+    margin-bottom: -2px;
+}
+
+.header-heading{
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+.header-heading p{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: none; 
+    margin-top: 20px;
+    font-weight: bolder;
+}
+.our-story{
+    text-align: center;
+    margin: 50px 0;
+}
+.story-heading{
+    color: #457A00;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 30px auto;
+}
+.story-content{
+    color: #19B38A;
+    padding: 0 200px;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.buy-button{
+    margin: auto;
+    color: #0B4737;
+    border: 3px solid #0B4737;
+    padding: 10px 20px;
+    width: fit-content;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+}
+.our-philosophy{
+    margin-top: 50px;
+}
+.title-grid{
+    display: flex;
+    margin-bottom: 50px;
+}
+.product-heading{
+    width: 60%;
+    text-align: center;
+    color: #457A00;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 50px auto;
+}
+.product-heading h1{
+    margin: auto;
+}
+.product-content{
+    width: 40%;
+}
+.product-content img{
+    height: 300px;
+}
+.philosophy-content{
+    background-color: #F8F8F7;
+    margin-top: -250px;
+    margin-bottom: 50px;
+}
+.philosophy-content p {
+    width: 60%;
+    text-align: center;
+    padding: 50px 120px 150px 120px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 18px;
+    font-weight: bold;
+}
+.team{
+    text-align: center;
+}
+.team-heading{
+    color: #457A00;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 30px auto;
+}
+.team-members{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 0 100px;
+}
+.member img{
+    margin-top: 30px;
+    width: 300px;
+    object-fit: cover;
+}
+.member p{
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.faq{
+    background-color: #F8F8F7;
+    padding: 50px 0;
+}
+.faq-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.faq-heading{
+    margin: auto;
+    text-align: center;
+    color: #0B4737;
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+}
+.faq-question{
+    width: 80%;
+    padding: 20px 20px 20px 0;
+    border-bottom: 1px solid #0B4737;
+    color: #0B4737;
+    font-family: 'Open Sans', sans-serif;
+}
+.faq-plus{
+    float: right;
+    font-size: 24px;
+}
+.more-faq{
+    color: #19B38A;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+.footer-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-family: 'Playfair Display', serif;
+    padding: 70px;
+    font-size: 22px;
+}
+.footer-contact{
+    margin: auto;
+}
+.footer-logo{
+    text-align: center;
+    color: #19B38A;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 25px;
+}
+.footer-logo img{
+    display: block;
+    margin: auto;
+}
+.logo{
+    width: 200px;
+}
+.social-media{
+    margin: 50px 0 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.social-media img{
+    width: 30px;
+}
+.footer-address{
+    margin: auto 0;
+}
+.map{
+    height:400px;
+    width:100%;
+    background:url('assets/map.png')
+}
