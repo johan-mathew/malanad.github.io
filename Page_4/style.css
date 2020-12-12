@@ -10,8 +10,11 @@
     top: 0;
     width: 100%;
     z-index: 5;
-    border-bottom: solid 2px rgb(255, 255, 255);
+    border-bottom: solid 2px white;
     padding: 0 40px;
+    background-color: transparent;
+    -webkit-transition: background-color .25s;
+    transition: background-color .25s;
 }
 .navbar .navbar-home{
     float: left;
@@ -24,6 +27,23 @@
     float: right;
     margin: 20px 20px;
     font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+    -webkit-transition: color .25s;
+    transition: color .25s;
+}
+html:not([data-scroll='0']) .navbar {
+    position: fixed;
+    top: 0;
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  }
+html:not([data-scroll='0']) .navbar-navs {
+    color: black;
+}
+html:not([data-scroll='0']) .active {
+    border-bottom: solid 2px rgb(0, 0, 0);
 }
 .header{
     position: relative;
@@ -75,6 +95,7 @@
     font-weight: bold;
 }
 .buy-button{
+    display: block;
     margin: auto;
     color: #0B4737;
     border: 3px solid #0B4737;
@@ -82,6 +103,14 @@
     width: fit-content;
     text-transform: uppercase;
     font-family: 'Work Sans', sans-serif;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    text-decoration: none;
+    cursor: pointer;
+}
+.buy-button:hover{
+    color: white;
+    background-color: #0B4737;
 }
 .our-philosophy{
     margin-top: 50px;
@@ -151,20 +180,31 @@
     padding: 50px 0;
 }
 .faq-grid{
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
 }
 .faq-heading{
-    margin: auto;
+    margin: 40px auto;
     text-align: center;
     color: #0B4737;
     font-family: 'Playfair Display', serif;
     font-weight: 300;
+    width: 50%;
+}
+.faq-questions{
+    width: 50%;
 }
 .faq-question{
     width: 80%;
     padding: 20px 20px 20px 0;
     border-bottom: 1px solid #0B4737;
+    color: #0B4737;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+.faq-answer{
+    display: none;
+    width: inherit;
+    padding: 20px 20px 0px 20px;
     color: #0B4737;
     font-family: 'Open Sans', sans-serif;
 }
@@ -178,6 +218,8 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    display: block;
+    text-decoration: none;
 }
 .footer-grid{
     display: grid;

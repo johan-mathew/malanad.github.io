@@ -12,6 +12,9 @@
     z-index: 5;
     border-bottom: solid 2px white;
     padding: 0 40px;
+    background-color: transparent;
+    -webkit-transition: background-color .25s;
+    transition: background-color .25s;
 }
 .navbar .navbar-home{
     float: left;
@@ -24,7 +27,22 @@
     float: right;
     margin: 20px 20px;
     font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+    -webkit-transition: color .25s;
+    transition: color .25s;
 }
+html:not([data-scroll='0']) .navbar {
+    position: fixed;
+    top: 0;
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  }
+html:not([data-scroll='0']) .navbar-navs {
+    color: black;
+}
+
 .header{
     position: relative;
     height: 95vh;
@@ -43,6 +61,14 @@
     font-family: 'Playfair Display', serif;
     font-size: 22px;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    -webkit-transition: background-color .25s;
+    transition: background-color .25s;
+}
+.header-button:hover{
+    color: black;
+    background-color: white;
 }
 .our-products{
     text-align: center;
@@ -56,6 +82,7 @@
     margin: 30px auto;
 }
 .products-grid{
+    margin: 60px auto;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 30px;
@@ -72,7 +99,6 @@
     position: relative;
     height: 300px;
     width: 60%;
-    background-color: violet;
 }
 .product-image img{
     position: absolute;
@@ -105,13 +131,8 @@
     background-color: transparent;
     z-index: 2;
 }
-.right{
-    right:0;
-}
-.left{
-    left:0;
-}
 .buy-button{
+    display: block;
     margin: auto;
     color: #0B4737;
     border: 3px solid #0B4737;
@@ -119,26 +140,115 @@
     width: fit-content;
     text-transform: uppercase;
     font-family: 'Work Sans', sans-serif;
+    -webkit-transition: all .25s;
+    transition: all .25s;
+    text-decoration: none;
+    cursor: pointer;
 }
+.buy-button:hover{
+    color: white;
+    background-color: #0B4737;
+}
+#buy-1,#buy-2,#buy-3,#buy-4,#buy-5,#buy-6{
+    opacity: 0;
+}
+#product-1:hover #buy-1{
+    opacity: 1;
+}
+#product-2:hover #buy-2{
+    opacity: 1;
+}
+#product-3:hover #buy-3{
+    opacity: 1;
+}
+#product-4:hover #buy-4{
+    opacity: 1;
+}
+#product-5:hover #buy-5{
+    opacity: 1;
+}
+#product-6:hover #buy-6{
+    opacity: 1;
+}
+  /* .mySlides1,.mySlides2,.mySlides3,.mySlides4,.mySlides5,.mySlides6 {
+    display: none;
+  } */
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev{
+      left: 0;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }  
 .faq{
     background-color: #F8F8F7;
     padding: 50px 0;
 }
 .faq-grid{
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
 }
 .faq-heading{
-    margin: auto;
+    margin: 40px auto;
     text-align: center;
     color: #0B4737;
     font-family: 'Playfair Display', serif;
     font-weight: 300;
+    width: 50%;
+}
+.faq-questions{
+    width: 50%;
 }
 .faq-question{
     width: 80%;
     padding: 20px 20px 20px 0;
     border-bottom: 1px solid #0B4737;
+    color: #0B4737;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+.faq-answer{
+    display: none;
+    width: inherit;
+    padding: 20px 20px 0px 20px;
     color: #0B4737;
     font-family: 'Open Sans', sans-serif;
 }
@@ -152,6 +262,8 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     margin: 20px 0;
+    display: block;
+    text-decoration: none;
 }
 .footer-grid{
     display: grid;
@@ -194,3 +306,4 @@
     width:100%;
     background:url('assets/map.png')
 }
+
