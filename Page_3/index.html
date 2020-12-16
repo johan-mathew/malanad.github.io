@@ -6,18 +6,51 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class = "navbar">
-        <div class="navbar-navs navbar-home"><p>Malanad Plantations</p></div>
-        <div class="navbar-navs"><p>Contact</p></div>
-        <div class="navbar-navs"><p>About</p></div>
-        <div class="navbar-navs"><p>Services</p></div>
-        <div class="navbar-navs"><p>Wholesale</p></div>  
-        <div class="navbar-navs"><p>Products</p></div>  
+        <a href="../Page_1/index.html" class="navbar-navs navbar-home">
+            <img src="assets/malanad-logo.png" class="navbar-logo">
+            <p>Malanad Plantations</p>
+        </a>
+        <div class="nav-links">
+            <a href="../Page_2/index.html" class="navbar-navs"><p>Products</p></a>  
+            <a href="../Page_6/index.html" class="navbar-navs"><p>Wholesale</p></a> 
+            <a href="../Page_5/index.html" class="navbar-navs"><p>Services</p></a> 
+            <a href="../Page_4/index.html" class="navbar-navs"><p>About</p></a>
+            <a href="#contact-section" class="navbar-navs"><p>Contact</p></a>
+        </div> 
+    </div>
+    <div class="mobile-navbar">
+        <a href="../Page_1/index.html" class="navbar-navs navbar-home">
+            <img src="assets/malanad-logo.png" class="navbar-logo">
+            <p>Malanad Plantations</p>
+        </a>
+        <a href="#" class="hamburger-icon" id="mobile-menu" onclick="openSidebar()">
+            <svg height="30px" viewBox="0 -53 384 384" xmlns="http://www.w3.org/2000/svg"><path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/></svg>
+        </a>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-heading"><p>Malanad Plantations</p></div>
+        <svg id="close" height="40px" onclick="closeSidebar()" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+        <a href="../Page_2/index.html" class="sidebar-navs"><p>Products</p></a>  
+        <a href="../Page_6/index.html" class="sidebar-navs"><p>Wholesale</p></a> 
+        <a href="../Page_5/index.html" class="sidebar-navs"><p>Services</p></a> 
+        <a href="../Page_4/index.html" class="sidebar-navs"><p>About</p></a>
+        <div class="sidebar-contact">
+            <p>We would like to connect with you</p>
+            <p>+91 8547522884</p>
+            <p>malanadpassionfruit4@gmail.com</p>
+            <div class="social-media">
+                <a href="https://instagram.com/malanadplantations?igshid=1kbz31nsthddy"><img src="assets/mobile-insta.png" alt="insta"></a> 
+                <a href="https://www.facebook.com/malanadplantations/"><img src="assets/mobile-facebook.png" alt="facebook"></a>
+                <a href=""><img src="assets/mobile-twitter.png" alt="twitter"></a>
+            </div>
+        </div>
     </div>
     <div class="faq">
         <div class="faq-grid">
@@ -54,12 +87,12 @@
         </div>
     </div>
     </div>
-    <div class="footer">
+    <div class="footer" id="contact-section">
         <div class="footer-grid">
             <div class="footer-contact">
                 <p>We would like to connect with you</p>
                 <p>+91 8547522884</p>
-                <p>tompeterkennady@gmail.com</p>
+                <p>malanadpassionfruit4@gmail.com</p>
             </div>
             <div class="footer-logo">
                 <img class = "logo"src="assets/malanad-logo.png" alt="logo">
@@ -68,19 +101,22 @@
                     <a href="https://www.facebook.com/malanadplantations/"><img src="assets/facebook.png" alt="facebook"></a>
                     <a href=""><img src="assets/twitter.png" alt="twitter"></a>
                 </div>
-                <div>
+                <div class="policy-and-terms">
                     <p>Privacy Policy & Terms of Use</p>
                     <p>Copyright 2020 Malanad Plantations</p>
                 </div>
             </div>
             <div class="footer-address">
                 <p>Malanad Plantations</p>
-                <p>Near Spices Park, Puttady</p>
-                <p>Kumily, Kerala - 682021</p>
+                <p>Karakombil Building</p>
+                <p>Chelad P.O.</p>
+                <p>Minipady</p>
+                <p>Kothamangalam - Pin 686 691</p>
             </div>
         </div>
     </div>
-    <div class="map"></div>
+    <div class="map" id="map"></div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

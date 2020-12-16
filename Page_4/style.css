@@ -15,48 +15,150 @@
     background-color: transparent;
     -webkit-transition: background-color .25s;
     transition: background-color .25s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.navbar .navbar-home{
-    float: left;
+.mobile-navbar{
+    display: none;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    border-bottom: solid 2px white;
+    background-color: transparent;
+    -webkit-transition: background-color .25s;
+    transition: background-color .25s;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.hamburger-icon{
+    display: inline-block;
+}
+.hamburger-icon svg path{
+    stroke: white;
+    fill: white;
+}
+.mobile-navbar .navbar-home{
+    display: flex;
+    justify-content: center;
+    align-self: center;
     text-transform: capitalize;
     font-family: 'Playfair Display', serif;
-
+    font-size: 18px;
+    width: fit-content;
+}
+.sidebar{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #457A00;
+    z-index: 5;
+    color: white;
+    padding-left: 20px;
+    right: -100vw;
+}
+.sidebar svg{
+    fill: white;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.sidebar-heading{
+    font-size: 20px;
+}
+.sidebar-contact{
+    font-size: 22px;
+}
+.sidebar-contact p {
+    margin: 20px 0;
+}
+.sidebar-navs{
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    font-size: 40px;
+}
+.sidebar-contact .social-media{
+    justify-content: space-between;
+}
+.navbar .navbar-home{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-transform: capitalize;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
 }
 .navbar-navs{
+    display: inline-block;
     text-transform: uppercase;
-    float: right;
-    margin: 20px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 20px;
     font-family: 'Work Sans', sans-serif;
     text-decoration: none;
     color: white;
     -webkit-transition: color .25s;
     transition: color .25s;
 }
+.navbar-logo{
+    opacity: 0;
+    height: 30px;
+    margin-right: 8px;
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+}
+
 html:not([data-scroll='0']) .navbar {
     position: fixed;
     top: 0;
     color: black;
     background-color: #fff;
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
-  }
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.16);
+}
+html:not([data-scroll='0']) .mobile-navbar {
+    position: fixed;
+    top: 0;
+    color: black;
+    background-color: #fff;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.16);
+}
 html:not([data-scroll='0']) .navbar-navs {
     color: black;
 }
-html:not([data-scroll='0']) .active {
-    border-bottom: solid 2px rgb(0, 0, 0);
+html:not([data-scroll='0']) .navbar-logo {
+    opacity: 1;
+}
+html:not([data-scroll='0']) .hamburger-icon svg path{
+    stroke:black;
+    fill:black;
 }
 .header{
     position: relative;
-    height: 95vh;
+    height: 75vh;
     width: 100%;
     background: url('assets/header-2.png');
     background-size: cover;
 }
 .active{
     border-bottom: solid 2px rgb(255, 255, 255);
+    padding-bottom: 5px;
     margin-bottom: -2px;
 }
-
+html:not([data-scroll='0']) .active{
+    border-bottom: solid 2px rgb(0, 0, 0);
+}
 .header-heading{
     text-align: center;
     color: white;
@@ -135,11 +237,11 @@ html:not([data-scroll='0']) .active {
     width: 40%;
 }
 .product-content img{
-    height: 300px;
+    width: 100%;
 }
 .philosophy-content{
     background-color: #F8F8F7;
-    margin-top: -250px;
+    margin-top: -350px;
     margin-bottom: 50px;
 }
 .philosophy-content p {
@@ -147,7 +249,7 @@ html:not([data-scroll='0']) .active {
     text-align: center;
     padding: 50px 120px 150px 120px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 18px;
+    font-size: 18px;
     font-weight: bold;
 }
 .team{
@@ -163,11 +265,12 @@ html:not([data-scroll='0']) .active {
 .team-members{
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 0 100px;
+    padding: 0 50px;
+    grid-gap:20px 30px;
 }
 .member img{
     margin-top: 30px;
-    width: 300px;
+    width: 100%;
     object-fit: cover;
 }
 .member p{
@@ -177,13 +280,13 @@ html:not([data-scroll='0']) .active {
 }
 .faq{
     background-color: #F8F8F7;
-    padding: 50px 0;
+    padding: 70px 0;
 }
 .faq-grid{
     display: flex;
 }
 .faq-heading{
-    margin: 40px auto;
+    margin: 10px auto;
     text-align: center;
     color: #0B4737;
     font-family: 'Playfair Display', serif;
@@ -195,17 +298,19 @@ html:not([data-scroll='0']) .active {
 }
 .faq-question{
     width: 80%;
-    padding: 20px 20px 20px 0;
+    padding: 25px 20px 25px 0;
     border-bottom: 1px solid #0B4737;
     color: #0B4737;
+    font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     cursor: pointer;
 }
 .faq-answer{
     display: none;
     width: inherit;
-    padding: 20px 20px 0px 20px;
-    color: #0B4737;
+    padding: 25px 20px 0px 25px;
+    font-size: 18px;
+    color: #19B38A;
     font-family: 'Open Sans', sans-serif;
 }
 .faq-plus{
@@ -223,13 +328,20 @@ html:not([data-scroll='0']) .active {
 }
 .footer-grid{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     font-family: 'Playfair Display', serif;
+    grid-gap: 30px;
     padding: 70px;
     font-size: 22px;
+    line-height: 35px;
+    text-align: center;
 }
 .footer-contact{
-    margin: auto;
+    margin: auto 0;
+    text-align: center;
+} 
+.footer-contact p {
+    margin: auto 0;
 }
 .footer-logo{
     text-align: center;
@@ -237,6 +349,7 @@ html:not([data-scroll='0']) .active {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     line-height: 25px;
+    margin: 0 auto;
 }
 .footer-logo img{
     display: block;
@@ -257,8 +370,456 @@ html:not([data-scroll='0']) .active {
 .footer-address{
     margin: auto 0;
 }
+.footer-address p{
+    margin: auto 0;
+}
+.policy-and-terms{
+    font-size: 16px;
+}
 .map{
     height:400px;
     width:100%;
     background:url('assets/map.png')
 }
+
+@media only screen and (max-width: 1200px) {
+    .products-grid{
+        grid-gap: 30px 70px;
+        padding: 0 30px;
+    }
+    .story-content{
+        padding: 0 170px;
+    }
+    .philosophy-content{
+        margin-top: -260px;
+        margin-bottom: 50px;
+    }
+    /* .product-content img{
+        height: 280px;
+    }     */
+  }
+  @media only screen and (max-width: 1000px) {
+    .navbar{
+        padding: 0 30px;
+    }
+    .navbar-navs{
+        margin: 17px;
+        font-size: 15px;
+    }
+    .navbar .navbar-home{
+        font-size: 20px;
+    }
+    .navbar-logo{
+        height: 25px;
+    }
+    .story-content{
+        padding: 0 140px;
+        font-size: 16px;
+    } 
+    .product-heading{
+        width: 60%;
+        margin: 40px auto;
+
+    }
+    .product-content{
+        width: 40%;
+    }
+    /* .product-content img{
+        height: 270px;
+    } */
+    .philosophy-content{
+        margin-top: -230px;
+        margin-bottom: 50px;
+    }
+    .philosophy-content p {
+        padding: 40px 90px 100px 90px;
+        font-size: 16px;
+    }   
+    .product-heading h1, .story-heading, .team-heading{
+        font-size: 30px;
+    }
+    .footer-grid{
+        font-size: 20px;
+        padding: 40px;
+        line-height: 28px;
+    }
+    .logo{
+        width: 180px;
+    }
+    .social-media{
+        margin: 40px 0 25px 0;
+    }
+    .social-media img{
+        width: 28px;
+    }
+    .policy-and-terms{
+        font-size: 14px;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .navbar{
+        padding: 0 20px;
+    }
+    .navbar-navs{
+        margin: 16px;
+        font-size: 14px;
+    }
+    .navbar .navbar-home{
+        font-size: 18px;
+    }
+    .navbar-logo{
+        height: 22px;
+    }
+    .story-content{
+        padding: 0 110px;
+        font-size: 15px;
+    }  
+    .product-heading h1, .story-heading, .team-heading{
+        font-size: 25px;
+    }
+    .product-heading{
+        width: 60%;
+        margin: 30px auto;
+    }
+    .product-content{
+        width: 40%;
+    }
+    /* .product-content img{
+        height: 250px;
+    } */
+    .philosophy-content{
+        margin-top: -200px;
+        margin-bottom: 50px;
+    }
+    .philosophy-content p {
+        padding: 30px 70px 90px 70px;
+        font-size: 15px;
+    }   
+    .faq-heading{
+        font-size: 18px;
+        width: 50%;
+    }
+    .faq-questions{
+        width: 50%;
+    }
+    .faq-question{
+        padding: 20px 15px 20px 0;
+        font-size: 16px;
+    }
+    .faq-answer{
+        padding: 20px 15px 0px 20px;
+        font-size: 16px;
+    }
+    .more-faq{
+        font-size: 16px;
+    }
+    .footer-grid{
+        font-size: 18px;
+        padding: 30px;
+        line-height: 25px;
+    }
+    .logo{
+        width: 170px;
+    }
+    .social-media{
+        margin: 35px 0 20px 0;
+    }
+    .social-media img{
+        width: 26px;
+    }
+    .policy-and-terms{
+        font-size: 14px;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .navbar{
+        padding: 0 20px;
+    }
+    .navbar-navs{
+        margin: 13px;
+        font-size: 12px;
+    }
+    .navbar .navbar-home{
+        font-size: 16px;
+    }
+    .navbar-logo{
+        height: 20px;
+    }
+    .story-content{
+        padding: 0 50px;
+        font-size: 14px;
+    } 
+    .product-heading{
+        width: 60%;
+        margin: 20px auto;
+    }
+    .product-content{
+        width: 40%;
+    }
+    /* .product-content img{
+        height: 230px;
+    } */
+    .philosophy-content{
+        margin-bottom: 50px;
+    }
+    .philosophy-content p {
+        padding: 30px 50px 80px 50px;
+        font-size: 14px;
+    }  
+    .buy-button{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .faq-heading{
+        font-size: 14px;
+        width: 50%;
+    }
+    .faq-questions{
+        width: 50%;
+    }
+    .faq-question{
+        width: 100%;
+        padding: 20px 12px 17px 0;
+        font-size: 14px;
+    }
+    .faq-answer{
+        padding: 20px 12px 0px 17px;
+        font-size: 14px;
+    }
+    .more-faq{
+        font-size: 14px;
+    }
+    .footer-grid{
+        font-size: 16px;
+        padding: 20px;
+        line-height: 20px;
+    }
+    .logo{
+        width: 165px;
+    }
+    .social-media{
+        margin: 35px 0 20px 0;
+    }
+    .social-media img{
+        width: 25px;
+    }
+    .policy-and-terms{
+        font-size: 12px;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .navbar{
+        padding: 0 10px;
+    }
+    .navbar-navs{
+        margin: 10px;
+        font-size: 10px;
+    }
+    .navbar .navbar-home{
+        font-size: 13px;
+    }
+    .navbar-logo{
+        height: 18px;
+    }
+    .story-content{
+        padding: 0 40px;
+        font-size: 13px;
+    }
+    .product-heading{
+        width: 60%;
+        margin: 10px auto;
+    }
+    .product-heading h1, .story-heading, .team-heading{
+        font-size: 22px;
+    }
+    .product-content{
+        width: 40%;
+    }
+    /* .product-content img{
+        height: 300px;
+    } */
+    .philosophy-content{
+        margin-top: -170px;
+        margin-bottom: 50px;
+    }
+    .philosophy-content p {
+        padding: 20px 40px 50px 40px;
+        font-size: 13px;
+    }  
+    .buy-button{
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+    .faq-heading{
+        font-size: 12px;
+        width: 35%;
+    }
+    .faq-questions{
+        width: 65%;
+    }
+    .footer-grid{
+        font-size: 14px;
+        padding: 20px;
+    }
+    .logo{
+        width: 160px;
+    }
+    .social-media{
+        margin: 35px 0 20px 0;
+    }
+    .social-media img{
+        width: 24px;
+    }
+    .policy-and-terms{
+        font-size: 10px;
+    }
+  }
+  @media only screen and (max-width: 560px) {
+    .header-button{
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+    .navbar{
+        padding: 0 0px;
+    }
+    .navbar-navs{
+        margin: 8px;
+        font-size: 9px;
+    }
+    .navbar .navbar-home{
+        font-size: 10px;
+    }
+    .navbar-logo{
+        height: 14px;
+    }
+    .story-content{
+        padding: 0 20px;
+        font-size: 12px;
+    }
+    .product-heading{
+        width: 60%;
+        margin: 50px auto;
+    }
+    .product-content{
+        width: 40%;
+    }
+     .product-content img{
+        margin-top: 50px;
+    } 
+    .philosophy-content{
+        margin-top: -150px;
+        margin-bottom: 50px;
+    }
+    .philosophy-content p {
+        padding: 20px 30px 40px 30px;
+        font-size: 12px;
+    }  
+    /* .buy-button{
+        padding: 7px 5px;
+        font-size: 7px;
+    } */
+    .footer-grid{
+        font-size: 12px;
+        padding: 10px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .mobile-navbar {
+      display: flex;
+    }
+    .navbar-navs{
+        margin: 0;
+    }
+    .story-content{
+        padding: 0 20px;
+        font-size: 16px;
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar-logo{
+        height: 22px;
+    }
+    .header-heading{
+        font-size: 16px;
+    }
+    .philosophy-content p {
+        padding: 50px 30px 150px 30px;
+        font-size: 16px;
+    }  
+    .title-grid{
+        display: block;
+        margin-bottom: 50px;
+    }
+    .product-heading{
+        width: 100%;
+        text-align: center;
+        color: #457A00;
+        font-family: 'Playfair Display', serif;
+        text-transform: uppercase;
+        font-weight: bolder;
+        margin: 50px auto;
+    }
+    .product-heading h1{
+        margin: auto;
+        width: 100%;
+    }
+    .product-content{
+        width: 100%;
+    }
+    .product-content img{
+        height: 0;
+        display: none;
+    }
+    .philosophy-content{
+        background-color: #F8F8F7;
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+    .philosophy-content p {
+        width: 100%;
+        text-align: center;
+        padding: 50px 30px 150px 30px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 18px;
+        font-weight: bold;
+    }
+    .products-grid{
+        margin: 30px auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 20px 15px;
+        padding: 0 0px;
+    }
+    .team-members{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 0 20px;
+    }
+    .member img{
+        padding: 0 40px;
+    }
+    #buy-1,#buy-2,#buy-3,#buy-4,#buy-5,#buy-6{
+        opacity: 1;
+    }
+    .faq-heading{
+        width: 100vw;
+    }
+    .faq-questions{
+        width: 100vw;
+        padding:0 20px;
+    }
+    .faq-question{
+        width: 100%;
+    }
+    .faq-grid{
+       flex-direction: column;
+    }
+    .footer-grid{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        font-size: 14px;
+    }
+    .buy-button{
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+  }
