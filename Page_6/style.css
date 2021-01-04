@@ -24,11 +24,10 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 4;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.16);
+    z-index: 6;
+    border-bottom: solid 2px white;
     background-color: white;
-    -webkit-transition: background-color .25s;
-    transition: background-color .25s;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.16);
     align-items: center;
     justify-content: space-between;
     padding: 5px 10px;
@@ -48,13 +47,12 @@
     font-family: 'Playfair Display', serif;
     font-size: 18px;
     width: fit-content;
-    padding: 0;
 }
 .sidebar{
     margin: 0;
+    top:0;
     height: 100vh;
     width: 100vw;
-    top:0;
     position: fixed;
     display: flex;
     justify-content: flex-start;
@@ -111,10 +109,10 @@
     color: rgb(0, 0, 0);
 }
 .navbar-logo{
-    opacity: 1;
     height: 30px;
     margin-right: 8px;
 }
+
 .active{
     border-bottom: solid 2px black;
     margin-bottom: -2px;
@@ -133,7 +131,6 @@
     width: 50%;
     padding:40px 0;
     text-align: center;
-    border-right: 2px solid #0B4737;
 }
 .product-heading h1{
     margin: auto;
@@ -143,8 +140,23 @@
     color: #19B38A;
     padding:40px;
     font-family: 'Open Sans', sans-serif;
+    border-left: 2px solid #0B4737;
     font-size: 18px;
     font-weight: bolder;
+    justify-self: center;
+    align-self: center;
+}
+/* .product-content p{
+    display: block;
+    margin: auto;
+} */
+
+.our-products h1{
+    color: #457A00;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 30px auto;
 }
 .panel-heading h1{
     color: #0B4737;
@@ -154,7 +166,7 @@
 }
 .panel{
     display: flex;
-    height: 600px;
+    height: 500px;
 }
 .panel-image{
     width: 30%;
@@ -162,29 +174,17 @@
 .panel-content{
     width: 70%;
     padding: 100px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.our-products h1{
-    color: #457A00;
-    font-family: 'Playfair Display', serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 30px auto;
 }
 
 .panel-description{
-    color: #19B38A;
+    color: #0B4737;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
 }
 .panel-more{
-    color: #19B38A;
+    color: #0B4737;
     margin-top: 20px;
 }
 .panel-image img{
@@ -301,9 +301,11 @@
     font-size: 16px;
 }
 .map{
+    display: block;
     height:400px;
     width:100%;
-    background:url('assets/map.png')
+    background:url('assets/map.png');
+    background-position: center;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -317,7 +319,7 @@
         padding: 0 30px;
     }
     .navbar-navs{
-        padding: 17px;
+        margin: 17px;
         font-size: 15px;
     }
     .navbar .navbar-home{
@@ -326,16 +328,19 @@
     .navbar-logo{
         height: 25px;
     }
-    .products-grid{
-        grid-gap: 30px 40px;
-        padding: 0 20px;
+    .our-products h1, .product-heading h1{
+        font-size: 30px;
     }
-    .product-image {
-        height: 300px;
+    .panel-heading,.panel-more h2{
+        font-size: 16px;
     }
-    .product h1{
-        font-size: 22px;
-        width: 75%;
+    .product-content{
+        padding:30px;
+        font-size: 16px;
+    }
+    .panel-description{
+        font-size: 16px;
+        line-height: 27px;
     }
     .footer-grid{
         font-size: 20px;
@@ -360,7 +365,7 @@
         padding: 0 20px;
     }
     .navbar-navs{
-        padding: 16px;
+        margin: 16px;
         font-size: 14px;
     }
     .navbar .navbar-home{
@@ -369,20 +374,19 @@
     .navbar-logo{
         height: 22px;
     }
-    .products-grid{
-        grid-gap: 30px 40px;
-        padding: 0 20px;
+    .our-products h1, .product-heading h1{
+        font-size: 25px;
     }
-    .product-image {
-        height: 300px;
+    .panel-heading,.panel-more h2{
+        font-size: 14px;
     }
-    .product h1{
-        font-size: 22px;
-        width: 75%;
+    .product-content{
+        padding:20px;
+        font-size: 14px;
     }
-    .product-description{
-        font-size: 16px;
-        line-height: 24px;
+    .panel-description{
+        font-size: 14px;
+        line-height: 25px;
     }
     .faq-heading{
         font-size: 18px;
@@ -425,7 +429,7 @@
         padding: 0 20px;
     }
     .navbar-navs{
-        padding: 13px;
+        margin: 13px;
         font-size: 12px;
     }
     .navbar .navbar-home{
@@ -433,21 +437,6 @@
     }
     .navbar-logo{
         height: 20px;
-    }
-    .products-grid{
-        grid-gap: 30px 20px;
-        padding: 0 0px;
-    }
-    .product-image {
-        height: 250px;
-    }
-    .product h1{
-        font-size: 20px;
-        width: 75%;
-    }
-    .product-description{
-        font-size: 16px;
-        line-height: 24px;
     }
     .buy-button{
         padding: 10px 15px;
@@ -495,7 +484,7 @@
         padding: 0 10px;
     }
     .navbar-navs{
-        padding: 10px;
+        margin: 10px;
         font-size: 10px;
     }
     .navbar .navbar-home{
@@ -504,20 +493,19 @@
     .navbar-logo{
         height: 18px;
     }
-    .products-grid{
-        grid-gap: 30px 20px;
-        padding: 0 0px;
+    .our-products h1, .product-heading h1{
+        font-size: 22px;
     }
-    .product-image {
-        height: 220px;
+    .panel-heading,.panel-more h2{
+        font-size: 12px;
     }
-    .product h1{
-        font-size: 18px;
-        width: 75%;
+    .product-content{
+        padding:10px;
+        font-size: 12px;
     }
-    .product-description{
-        font-size: 14px;
-        line-height: 24px;
+    .panel-description{
+        font-size: 13px;
+        line-height: 22px;
     }
     .buy-button{
         padding: 7px 10px;
@@ -556,7 +544,7 @@
         padding: 0 0px;
     }
     .navbar-navs{
-        padding: 8px;
+        margin: 8px;
         font-size: 9px;
     }
     .navbar .navbar-home{
@@ -565,24 +553,9 @@
     .navbar-logo{
         height: 14px;
     }
-    .products-grid{
-        grid-gap: 20px 15px;
-        padding: 0 0px;
-    }
-    .product-image {
-        height: 220px;
-    }
-    .product h1{
-        font-size: 17px;
-        width: 75%;
-    }
-    .product-description{
-        font-size: 12px;
-        line-height: 20px;
-    }
     .buy-button{
         padding: 7px 5px;
-        font-size: 7px;
+        font-size: 10px;
     }
     .footer-grid{
         font-size: 12px;
@@ -610,9 +583,16 @@
         margin: auto;
     }
     .product-content{
-        padding:20px;
+        padding:10px;
         margin: auto;
-        font-size: 10px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .products-grid{
+        margin: 30px auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 20px 15px;
+        padding: 0 0px;
     }
     .panel-image{
         width: 30%;
@@ -631,12 +611,6 @@
     .panel-description{
         font-size: 14px;
         line-height: 22px;
-    }
-    .products-grid{
-        margin: 30px auto;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-gap: 20px 15px;
-        padding: 0 0px;
     }
     #buy-1,#buy-2,#buy-3,#buy-4,#buy-5,#buy-6{
         opacity: 1;

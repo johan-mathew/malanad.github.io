@@ -131,7 +131,6 @@
     width: 50%;
     padding:40px 0;
     text-align: center;
-    border-right: 2px solid #0B4737;
 }
 .product-heading h1{
     margin: auto;
@@ -141,8 +140,16 @@
     color: #19B38A;
     padding:40px;
     font-family: 'Open Sans', sans-serif;
+    border-left: 2px solid #0B4737;
     font-size: 18px;
     font-weight: bolder;
+    justify-self: center;
+    align-self: center;
+}
+.product-content p{
+    /* display: block; */
+    justify-self: center;
+    align-self: center;
 }
 
 .our-products h1{
@@ -171,14 +178,14 @@
 }
 
 .panel-description{
-    color: #19B38A;
+    color: #0B4737;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
 }
 .panel-more{
-    color: #19B38A;
+    color: #0B4737;
     margin-top: 20px;
 }
 .panel-image img{
@@ -295,9 +302,11 @@
     font-size: 16px;
 }
 .map{
+    display: block;
     height:400px;
     width:100%;
-    background:url('assets/map.png')
+    background:url('assets/map.png');
+    background-position: center;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -319,6 +328,20 @@
     }
     .navbar-logo{
         height: 25px;
+    }
+    .our-products h1, .product-heading h1{
+        font-size: 30px;
+    }
+    .panel-heading,.panel-more h2{
+        font-size: 16px;
+    }
+    .product-content{
+        padding:30px;
+        font-size: 16px;
+    }
+    .panel-description{
+        font-size: 16px;
+        line-height: 27px;
     }
     .footer-grid{
         font-size: 20px;
@@ -351,6 +374,20 @@
     }
     .navbar-logo{
         height: 22px;
+    }
+    .our-products h1, .product-heading h1{
+        font-size: 25px;
+    }
+    .panel-heading,.panel-more h2{
+        font-size: 14px;
+    }
+    .product-content{
+        padding:20px;
+        font-size: 14px;
+    }
+    .panel-description{
+        font-size: 14px;
+        line-height: 25px;
     }
     .faq-heading{
         font-size: 18px;
@@ -457,6 +494,20 @@
     .navbar-logo{
         height: 18px;
     }
+    .our-products h1, .product-heading h1{
+        font-size: 22px;
+    }
+    .panel-heading,.panel-more h2{
+        font-size: 12px;
+    }
+    .product-content{
+        padding:10px;
+        font-size: 12px;
+    }
+    .panel-description{
+        font-size: 13px;
+        line-height: 22px;
+    }
     .buy-button{
         padding: 7px 10px;
         font-size: 12px;
@@ -533,9 +584,10 @@
         margin: auto;
     }
     .product-content{
-        padding:20px;
+        padding:10px;
         margin: auto;
-        font-size: 10px;
+        font-size: 12px;
+        line-height: 20px;
     }
     .products-grid{
         margin: 30px auto;

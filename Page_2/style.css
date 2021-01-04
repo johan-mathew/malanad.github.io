@@ -126,12 +126,14 @@
 .title-grid{
     display: flex;
     margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .product-heading{
     width: 50%;
     padding:40px 0;
     text-align: center;
-    border-right: 2px solid #0B4737;
 }
 .product-heading h1{
     margin: auto;
@@ -141,8 +143,13 @@
     color: #19B38A;
     padding:40px;
     font-family: 'Open Sans', sans-serif;
+    border-left: 2px solid #0B4737;
     font-size: 18px;
     font-weight: bolder;
+}
+.product-content p{
+    display: block;
+    margin: auto;
 }
 
 .our-products h1{
@@ -217,7 +224,7 @@
     color: white;
     background-color: #0B4737;
 }
-#buy-1,#buy-2,#buy-3,#buy-4,#buy-5,#buy-6{
+#buy-1,#buy-2,#buy-3,#buy-4,#buy-5,#buy-6,#buy-7{
     opacity: 0;
 }
 #product-1:hover #buy-1{
@@ -238,7 +245,9 @@
 #product-6:hover #buy-6{
     opacity: 1;
 }
- 
+#product-7:hover #buy-7{
+    opacity: 1;
+}
 .faq{
     background-color: #F8F8F7;
     padding: 70px 0;
@@ -338,9 +347,11 @@
     font-size: 16px;
 }
 .map{
+    display: block;
     height:400px;
     width:100%;
-    background:url('assets/map.png')
+    background:url('assets/map.png');
+    background-position: center;
 }
 
 .swiper-container {
@@ -371,6 +382,13 @@
     }
     .navbar-logo{
         height: 25px;
+    }
+    .our-products h1, .product-heading h1{
+        font-size: 30px;
+    }
+    .product-content{
+        padding:30px;
+        font-size: 16px;
     }
     .products-grid{
         grid-gap: 30px 40px;
@@ -414,6 +432,13 @@
     }
     .navbar-logo{
         height: 22px;
+    }
+    .our-products h1, .product-heading h1{
+        font-size: 25px;
+    }
+    .product-content{
+        padding:20px;
+        font-size: 14px;
     }
     .products-grid{
         grid-gap: 30px 40px;
@@ -549,6 +574,13 @@
     }
     .navbar-logo{
         height: 18px;
+    }
+    .our-products h1, .product-heading h1{
+        font-size: 22px;
+    }
+    .product-content{
+        padding:10px;
+        font-size: 12px;
     }
     .products-grid{
         grid-gap: 30px 20px;

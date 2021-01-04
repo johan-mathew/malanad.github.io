@@ -49,3 +49,10 @@ const debounce = (fn) => {
       x.style.display = "none";
     }
   }
+
+  var swiper = new Swiper('.swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
