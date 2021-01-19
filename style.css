@@ -17,6 +17,7 @@
     transition: background-color .25s;
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: space-between;
 }
 .mobile-navbar{
@@ -163,7 +164,7 @@ html:not([data-scroll='0']) .hamburger-icon svg path{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 20%;
+    bottom: 30%;
     width: fit-content;
     border: solid 2px white;
     padding: 15px 30px;
@@ -372,7 +373,7 @@ html:not([data-scroll='0']) .hamburger-icon svg path{
     margin: auto 0;
 }
 .policy-and-terms{
-    font-size: 16px;
+    font-size: 15px;
 }
 .map{
     display: block;
@@ -401,6 +402,13 @@ html:not([data-scroll='0']) .hamburger-icon svg path{
   }
   #header-carousel .swiper-pagination-bullet-active{
       background: white;
+  }
+ .product-image  .swiper-pagination-bullet {
+    opacity: 1;
+    background: #02382a59;
+  }
+ .product-image  .swiper-pagination-bullet-active{
+      background: #0B4737;
   }
 
   @media only screen and (max-width: 1200px) {
@@ -667,7 +675,7 @@ html:not([data-scroll='0']) .hamburger-icon svg path{
         padding: 0 0px;
     }
     .product-image {
-        height: 220px;
+        height: 250px;
     }
     .product h1{
         font-size: 17px;

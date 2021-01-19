@@ -140,12 +140,13 @@
 }
 .product-content{
     width: 50%;
-    color: #19B38A;
+    color: #0B4737;
     padding:40px;
     font-family: 'Open Sans', sans-serif;
     border-left: 2px solid #0B4737;
     font-size: 18px;
     font-weight: bolder;
+    text-align: justify;
 }
 .product-content p{
     display: block;
@@ -305,6 +306,7 @@
     font-size: 22px;
     line-height: 35px;
     text-align: center;
+    margin: 50px 0;
 }
 .footer-contact{
     margin: auto 0;
@@ -344,11 +346,11 @@
     margin: auto 0;
 }
 .policy-and-terms{
-    font-size: 16px;
+    font-size: 15px;
 }
 .map{
     display: block;
-    height:400px;
+    height:500px;
     width:100%;
     background:url('assets/map.png');
     background-position: center;
@@ -362,6 +364,13 @@
 .swiper-slide {
     padding-bottom: 40px;
 }
+.product-image  .swiper-pagination-bullet {
+    opacity: 1;
+    background: #02382a59;
+  }
+ .product-image  .swiper-pagination-bullet-active{
+      background: #0B4737;
+  }
 
   @media only screen and (max-width: 1200px) {
     .products-grid{
@@ -648,7 +657,7 @@
         padding: 0 0px;
     }
     .product-image {
-        height: 220px;
+        height: 250px;
     }
     .product h1{
         font-size: 17px;
@@ -718,7 +727,7 @@
         font-size: 12px;
         line-height: 20px;
     }
-    #buy-1,#buy-2,#buy-3,#buy-4,#buy-5,#buy-6{
+    #buy-1,#buy-2,#buy-3,#buy-4,#buy-5,#buy-6,#buy-7{
         opacity: 1;
     }
     .faq-heading{

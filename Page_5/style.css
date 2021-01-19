@@ -137,7 +137,7 @@
 }
 .product-content{
     width: 50%;
-    color: #19B38A;
+    color: #0B4737;
     padding:40px;
     font-family: 'Open Sans', sans-serif;
     border-left: 2px solid #0B4737;
@@ -150,6 +150,7 @@
     /* display: block; */
     justify-self: center;
     align-self: center;
+    text-align: justify;
 }
 
 .our-products h1{
@@ -168,6 +169,7 @@
 .panel{
     display: flex;
     height: 500px;
+    margin-bottom: 50px;
 }
 .panel-image{
     width: 30%;
@@ -175,6 +177,10 @@
 .panel-content{
     width: 70%;
     padding: 100px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .panel-description{
@@ -260,6 +266,7 @@
     font-size: 22px;
     line-height: 35px;
     text-align: center;
+    margin: 50px 0;
 }
 .footer-contact{
     margin: auto 0;
@@ -299,11 +306,11 @@
     margin: auto 0;
 }
 .policy-and-terms{
-    font-size: 16px;
+    font-size: 15px;
 }
 .map{
     display: block;
-    height:400px;
+    height:500px;
     width:100%;
     background:url('assets/map.png');
     background-position: center;

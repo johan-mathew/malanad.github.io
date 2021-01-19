@@ -337,6 +337,7 @@ html:not([data-scroll='0']) .active{
     font-size: 22px;
     line-height: 35px;
     text-align: center;
+    margin: 50px 0;
 }
 .footer-contact{
     margin: auto 0;
@@ -376,11 +377,11 @@ html:not([data-scroll='0']) .active{
     margin: auto 0;
 }
 .policy-and-terms{
-    font-size: 16px;
+    font-size: 15px;
 }
 .map{
     display: block;
-    height:400px;
+    height:500px;
     width:100%;
     background:url('assets/map.png');
     background-position: center;
