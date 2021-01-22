@@ -42,6 +42,9 @@
     stroke: white;
     fill: white;
 }
+.navbar-home{
+    white-space: nowrap;
+}
 .mobile-navbar .navbar-home{
     display: flex;
     justify-content: center;
@@ -170,6 +173,7 @@ html:not([data-scroll='0']) .active{
     font-size: 22px;
     text-transform: uppercase; 
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 .header-heading p{
     font-family: 'Open Sans', sans-serif;

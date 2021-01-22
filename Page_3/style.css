@@ -40,6 +40,9 @@
     stroke: rgb(0, 0, 0);
     fill: rgb(0, 0, 0);
 }
+.navbar-home{
+    white-space: nowrap;
+}
 .mobile-navbar .navbar-home{
     display: flex;
     justify-content: center;
