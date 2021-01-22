@@ -189,6 +189,7 @@
     text-transform: capitalize;
     font-size: 25px;
     width: 75%;
+    margin-top: 0px;
 }
 .product-description{
     width: 75%;

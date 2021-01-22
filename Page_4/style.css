@@ -189,7 +189,7 @@ html:not([data-scroll='0']) .active{
     margin: 30px auto;
 }
 .story-content{
-    color: #19B38A;
+    color: #0B4737;
     padding: 0 200px;
     font-size: 18px;
     line-height: 35px;
@@ -200,7 +200,7 @@ html:not([data-scroll='0']) .active{
     display: block;
     margin: auto;
     color: #0B4737;
-    border: 3px solid #0B4737;
+    border: 2px solid #0B4737;
     padding: 10px 20px;
     width: fit-content;
     text-transform: uppercase;
@@ -246,6 +246,7 @@ html:not([data-scroll='0']) .active{
     margin-bottom: 50px;
 }
 .philosophy-content p {
+    color:  #0B4737;
     width: 60%;
     text-align: center;
     line-height: 35px;

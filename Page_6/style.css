@@ -168,6 +168,7 @@
 .panel{
     display: flex;
     height: 500px;
+    margin-bottom: 80px;
 }
 .panel-image{
     width: 30%;
@@ -175,16 +176,18 @@
 .panel-content{
     width: 70%;
     padding: 100px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 }
-
 .panel-description{
     color: #0B4737;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
-}
-.panel-more{
+}.panel-more{
     color: #0B4737;
     margin-top: 20px;
 }
